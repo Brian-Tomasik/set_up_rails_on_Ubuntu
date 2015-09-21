@@ -12,9 +12,10 @@ I ran Ubunt using VirtualBox on my Windows laptop. Initially I set it up using [
 
 1. Install [VirtualBox](https://www.virtualbox.org/).
 2. [Download Ubuntu](http://www.ubuntu.com/download/desktop) as an .iso file.
-3. Create a VirtualBox VM using that .iso file. There are various tutorials, like [this one](http://www.psychocats.net/ubuntu/virtualbox), about how to set up a VirtualBox VM. During the setup process, Ubuntu asks you if you want to "Erase disk". Since Ubuntu is in a VM, [you can](http://ubuntuforums.org/archive/index.php/t-2142889.html) say "yes" to this without worrying about affecting your Windows disk.
-4. Once Ubuntu is ready and has restarted, press Ctrl+Alt+t to open a terminal window. Type
+3. Create a VirtualBox VM using that .iso file. There are various tutorials, like [this one](http://www.psychocats.net/ubuntu/virtualbox), about how to set up a VirtualBox VM. During the setup process, Ubuntu asks you if you want to "Erase disk". Since Ubuntu is in a VM, [you can](http://ubuntuforums.org/archive/index.php/t-2142889.html) say "yes" to this without worrying about affecting your Windows disk. Ubuntu will do various installation and need a restart.
+4. Enable "Guest Additions" by following [this video](https://www.youtube.com/watch?v=Q84boOmiPW8). Doing this will allow you to maximize the VM screen and copy-paste between the host (Windows) and the VM (Ubuntu). If copy-pasting still doesn't work, follow [these instructions](http://www.liberiangeek.net/2013/09/copy-paste-virtualbox-host-guest-machines/).
+5. Press Ctrl+Alt+t to open a terminal window and copy-paste this:
 
-        sudo apt-get -y update && sudo apt-get -y install git && git clone https://github.com/Brian-Tomasik/set_up_rails_on_Ubuntu.git && chmod 755 setup.sh && ./setup.sh
+        sudo apt-get -y update && sudo apt-get -y install git && git clone https://github.com/Brian-Tomasik/set_up_rails_on_Ubuntu.git && cd set_up_rails_on_Ubuntu && chmod 755 setup.sh && ./setup.sh
 
 Much of this `setup.sh` script is based on [this walkthrough](https://gorails.com/setup/ubuntu/15.04).

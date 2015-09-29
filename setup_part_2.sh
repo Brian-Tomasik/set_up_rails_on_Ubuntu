@@ -1,3 +1,5 @@
+# The following commands are copied from https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-14-04
+
 rbenv install -v 2.2.1
 rbenv global 2.2.1
 

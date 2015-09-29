@@ -6,7 +6,7 @@ This project describes how I set up Ruby on Rails on an Ubuntu VM on my Windows 
 
 Initially I tried to install Rails on my Windows laptop directly. However, I ran into a problem with a Turbolinks Gem, and I [wasn't](http://stackoverflow.com/questions/28312460/object-doesnt-support-this-property-or-method-rails-windows-64bit/) able to find a good solution. In general, I heard that Rails had more hiccups on Windows, so I thought it might make sense to use Linux instead.
 
-I ran Ubunt using VirtualBox on my Windows laptop. Initially I set it up using [Vagrant](https://www.vagrantup.com/), which creates a quick Linux VM that you can access in the command line. But I realized I wanted the GUI functionality of Ubuntu in order to more easily view the Rails web app in the browser and perform various other functions, so I instead decided to use just VirtualBox on its own.
+I ran Ubuntu using VirtualBox on my Windows laptop. Initially I set it up using [Vagrant](https://www.vagrantup.com/), which creates a quick Linux VM that you can access in the command line. But I realized I wanted the GUI functionality of Ubuntu in order to more easily view the Rails web app in the browser and perform various other functions, so I instead decided to use just VirtualBox on its own.
 
 ## Steps
 
@@ -18,17 +18,17 @@ I ran Ubunt using VirtualBox on my Windows laptop. Initially I set it up using [
 
         sudo apt-get -y update && sudo apt-get -y install git && git clone https://github.com/Brian-Tomasik/set_up_rails_on_Ubuntu.git && cd set_up_rails_on_Ubuntu && chmod 755 setup.sh && ./setup.sh
 
-Much of this `setup.sh` script is based on [this walkthrough](https://gorails.com/setup/ubuntu/15.04).
+	Much of this `setup.sh` script is based on [this walkthrough](https://gorails.com/setup/ubuntu/15.04).
 
 6. [optional] Change the time until you get logged out of the Ubuntu computer [as follows](http://ubuntuforums.org/showthread.php?t=1601092&p=9998451#post9998451):
 
-	sudo nano /etc/xdg/autostart/gnome-screensaver.desktop
+	    sudo nano /etc/xdg/autostart/gnome-screensaver.desktop
 
-and edit the line that looks like
+    and edit the line that looks like
 
-	X-GNOME-Autostart-Delay=20
+	    X-GNOME-Autostart-Delay=20
 
-to have a higher delay number.
+    to have a higher delay number.
 
 7. [optional] Install your favorite text editor. I use the gmate text editor (already installed on Ubuntu).
 
